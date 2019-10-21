@@ -1,6 +1,6 @@
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var logger = require("morgan");
+// var logger = require("morgan");
 
 var express = require("express");
 var app = express();
@@ -24,7 +24,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/Scraper_news";
+  process.env.MONGODB_URI || "mongodb://localhost/Scraper_News";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
